@@ -1,5 +1,5 @@
 let puntaje = document.getElementById("puntaje");
-let txt_pregunta = document.querySelector(".preguntas_p");
+let txt_pregunta = document.querySelector(".pregunta_p");
 
 let txt_preg_a = document.querySelector(".res_a");
 let txt_preg_b = document.querySelector(".res_b");
@@ -44,9 +44,32 @@ let pregunta_tercera =
 	correcta:"1453"
 }
  
-window.onload = function mostrarPregunta(){
-	console.log(pregunta_primera.pregunta)
+function mostrarPregunta_a(){
 	txt_pregunta.innerHTML = pregunta_primera.pregunta;
+	txt_preg_a.innerHTML = pregunta_primera.res_obj_a;
+	txt_preg_b.innerHTML = pregunta_primera.res_obj_b;
+	txt_preg_c.innerHTML = pregunta_primera.res_obj_c;
 };
 
-mostrarPregunta()
+function mostrarPregunta_b(){
+	txt_pregunta.innerHTML = pregunta_segunda.pregunta;
+	txt_preg_a.innerHTML = pregunta_segunda.res_obj_a;
+	txt_preg_b.innerHTML = pregunta_segunda.res_obj_b;
+	txt_preg_c.innerHTML = pregunta_segunda.res_obj_c;
+};
+
+function mostrarPregunta_c(){
+	txt_pregunta.innerHTML = pregunta_tercera.pregunta;
+	txt_preg_a.innerHTML = pregunta_tercera.res_obj_a;
+	txt_preg_b.innerHTML = pregunta_tercera.res_obj_b;
+	txt_preg_c.innerHTML = pregunta_tercera.res_obj_c;
+};
+
+
+function preguntas(){
+	if (mostrarPregunta_a == true) {
+		mostrarPregunta_a();
+	} else{
+		mostrarPregunta_b()
+	}
+}
