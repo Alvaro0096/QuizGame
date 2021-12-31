@@ -46,6 +46,26 @@ body{
 	padding-bottom: 3em;
 }
 
+.img_check{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.img_good, .img_bad{
+	position: absolute;	
+	opacity: 0.3;
+}
+
+.img_good{
+	display: none;
+}
+
+.img_bad{
+	display: none;
+}
+
 .respuesta{
 	display: flex;
 	flex-direction: column;
@@ -119,4 +139,13 @@ span{
 a:hover{
 	color: #083761;
 	background: #2196f3;
+}
+
+/* Clases para JS */
+.green{
+	background: green;
+}
+
+.red{
+	background: red;
 }
