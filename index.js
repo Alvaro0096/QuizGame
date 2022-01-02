@@ -71,10 +71,14 @@ function comprobar(respuesta, pregunta){
 		txt_preg_a.disabled=true;
 		txt_preg_b.disabled=true;
 		txt_preg_c.disabled=true;
+		btn_a.disabled=true;
+		btn_b.disabled=true;
+		btn_c.disabled=true;
+		img_ok.style.display='flex';
 		continuar.style.display = 'flex';
 		score = score + 5;
 		puntaje.textContent = score;
-		pregunta.check = true
+		pregunta.check = true;
 		console.log(pregunta.check);
 		color_back(pregunta);
 	}
@@ -82,6 +86,10 @@ function comprobar(respuesta, pregunta){
 		txt_preg_a.disabled=true;
 		txt_preg_b.disabled=true;
 		txt_preg_c.disabled=true;
+		btn_a.disabled=true;
+		btn_b.disabled=true;
+		btn_c.disabled=true;
+		img_bad.style.display='flex';
 		continuar.style.display = 'flex';
 		score = score - 5;
 		puntaje.textContent = score;
@@ -171,6 +179,11 @@ function btn_cambio_pag(){
 	txt_preg_a.disabled=false;
 	txt_preg_b.disabled=false;
 	txt_preg_c.disabled=false;
+	btn_a.disabled=false;
+	btn_b.disabled=false;
+	btn_c.disabled=false;
+	img_ok.style.display='none';
+	img_bad.style.display='none';
 	color_back_remove()
 	if (contador_pregunta===2) {
 		mostrarPregunta(pregunta2);
@@ -181,7 +194,7 @@ function btn_cambio_pag(){
 		pregunta3.check = false;
 	}
 	else {
-		alert(`Juego Finalizado.`);
+		continuar.href = 'final.html';
 	}
 }
 

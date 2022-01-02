@@ -17,6 +17,7 @@ body{
 }
 
 .title{
+	text-align: center;
 	font-size: 3rem;
 	color: #2196f3;
 	border: 0.125em solid #2196f3;
@@ -34,6 +35,10 @@ body{
 	justify-items: center;
 	align-items: center;
 	grid-template-rows: 8em 8em 8em;
+}
+
+.reintentar{
+	margin-top: 5em;
 }
 
 a{
@@ -116,4 +121,21 @@ a:hover span:nth-child(4){
 	bottom: 100%;
 	transition: 1s;
 	transition-delay: 0.75s;
+}
+
+@media (max-width: 768px){
+
+.title{
+	font-size: 2rem;
+}
+
+.container{
+	grid-template-rows: 8em 6em 6em;
+	row-gap: 1em;
+}
+
+a{
+	font-size: 1.5em;
+}
+
 }
